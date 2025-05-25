@@ -1,12 +1,29 @@
-# conditional statements
-total_bill = 990 
-discount = 10 
-if total_bill > 100:
-    print("the bill is greater then your got a discount of 10%")
-    total_bill = total_bill - (total_bill * discount / 100)
-    print(total_bill)
+# i want to practice conditional statements in python
+# ARRAYS
+ARRAY_1 = ["ROAHIL",  "RAHEEL", "ROMAIL" ,"TASIR", "FAIZAN"]
+ARRAY_1.append("EHTHISHAM")
+print(ARRAY_1)
+ 
+array =["BANANA","PEAR","APPLE","GRAPES","CHEERY"]
+array.pop()
+print(array)
 
-else: 
-    print("the bill is less then 100 no discout")
-    print("your total bill is:", total_bill)
-# https://github.com/rohailrahmat/Python_Basics.git
+array.remove("BANANA")
+print(array)
+
+new_ary = array.copy()
+
+
+chai = "masala tea ", "ginger tea", "ulunge tea"
+
+# indexing 
+index_of_chai = chai[0]
+print(index_of_chai)
+
+# slicing
+chai = "masalsa chai "
+slice_chai = chai[0:8]
+
+print(slice_chai)
+
+# convertion of numbers in binary and hexa decimal
