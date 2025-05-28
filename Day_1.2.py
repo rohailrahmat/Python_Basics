@@ -35,3 +35,8 @@ learning_python = True
 doing = "BSSE"
 print(f"my name is {name} and i am {age} years old and my height is {height} in feets and i am doing {doing} and i am learning python: {learning_python}")
 
+# git init
+# git remote add origin https://github.com/rohailrahmat/Python_Basics/blob/main/day_4.py
+# git add .
+# git commit -m "code update"
+# git push -u origin main
