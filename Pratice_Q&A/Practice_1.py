@@ -1,114 +1,91 @@
-menu = {
-    1: {"name": 'espresso', "price": 1.99},
-    2: {"name": 'coffee', "price": 2.50},
-    3: {"name": 'cake', "price": 2.79},
-    4: {"name": 'soup', "price": 4.50},
-    5: {"name": 'sandwich', "price": 4.99}
-}
-
-def calculate_subtotal(order):
-    """Calculates the subtotal of an order.
-
-    [IMPLEMENT ME]
-        1. Add up the prices of all items in the order.
-        2. Round the result to 2 decimal places and return it.
-
-    Args:
-        order (list): A list of dicts, where each dict represents an item with a name and price.
-
-    Returns:
-        float: The subtotal of all item prices, rounded to 2 decimal places.
-    """
-    print('Calculating bill subtotal...')
-    ### WRITE SOLUTION HERE
-    total = 0
-
-    for items in order:
-        items += items["price"]
-    subtotal = round(order,2)
-    return subtotal 
+# 🔁 Loops Practice
+# 1. 🔢 Print Numbers with for loop
+# Write a program that prints numbers from 1 to 10 using a for loop.
+# x = 0
+# for i in range(1,11):
+#     print(i)
+    
 
 
-def calculate_tax(subtotal):
-    """Calculates the tax of an order.
 
-    [IMPLEMENT ME]
-        1. Calculate 15% of the subtotal.
-        2. Round the tax to 2 decimal places and return it.
+# 2. 🔁 while loop: Count Down
+# Write a program that counts down from 5 to 1 using a while loop, and then prints "Blast off!".
+# count = 5
+# while count > 0:
+#     print(count)
+#     count -= 1
 
-    Args:
-        subtotal (float): The subtotal amount.
-
-    Returns:
-        float: The calculated tax amount, rounded to 2 decimal places.
-    """
-    print('Calculating tax from subtotal...')
-    ### WRITE SOLUTION HERE
-def calculate_tax(subtotal):
-    print('Calculating tax from subtotal...')
-    tax = subtotal * 0.15
-    return round(tax, 2)
+# print("Blast off!")
 
 
-def summarize_order(order):
-    """Summarizes the order.
-
-    [IMPLEMENT ME]
-        1. Calculate subtotal and tax.
-        2. Compute the total (subtotal + tax) and round to 2 decimal places.
-        3. Extract the item names and return them with the total.
-
-    Args:
-        order (list): A list of dicts, where each dict represents an item with a name and price.
-
-    Returns:
-        tuple: A list of item names and the total amount (rounded to 2 decimal places).
-    """
-    print_order(order)
-    ### WRITE SOLUTION HERE
+# 3. 🔁 for loop with condition
+# Print all even numbers between 1 and 20 using a for loop and if.
+# for num in range(1 , 21):
+#     if num % 2 == 0:
+#         print(num)
 
 
-# This function is provided for you and will print out the items in an order
-def print_order(order):
-    print('You have ordered ' + str(len(order)) + ' items')
-    items = [item["name"] for item in order]
-    print(items)
-    return order
+# 4. 🔁 Sum of Numbers
+# Use a for loop to calculate the sum of numbers from 1 to 100.
+# total = 0
+# for i in range(1 , 101):
+#     total += i
+# print(total)
 
-# This function is provided for you and will display the menu
-def display_menu():
-    print("------- Menu -------")
-    for selection in menu:
-        print(f"{selection}. {menu[selection]['name'] : <9} | {menu[selection]['price'] : >5}")
-    print()
 
-# This function is provided for you and will create an order by prompting the user to select menu items
-def take_order():
-    display_menu()
-    order = []
-    count = 1
-    for i in range(3):
-        item = input('Select menu item number ' + str(count) + ' (from 1 to 5): ')
-        count += 1
-        order.append(menu[int(item)])
-    return order
+# 5. 🧮 Multiplication Table
+# Ask the user for a number and print its multiplication table (1 to 10).
+# num = int(input("please enter a number:"))
+# for i in range(1 ,11):
+#     print(f"{num} X {i} = {num * i}")
 
-'''
-Here are some sample function calls to help you test your implementations.
-Feel free to change, uncomment, and add these as you wish.
-'''
-def main():
-    order = take_order()
-    print_order(order)
+# 🧰 Functions Practice
+# 6. 🔧 Function to Greet
+# Write a function greet(name) that prints Hello, name!.
+# def greet (name):
+#     print("Hello",name)
+# greet("rohail")
 
-    # subtotal = calculate_subtotal(order)
-    # print("Subtotal for the order is: " + str(subtotal))
 
-    # tax = calculate_tax(subtotal)
-    # print("Tax for the order is: " + str(tax))
+# 7. ➕ Function to Add Two Numbers
+# Write a function add(a, b) that returns the sum of two numbers.
+# def add(a , b):
+#     return a + b
+# result = add(1,4)
+# print("this is the addition:", result)
 
-    # names, total = summarize_order(order)
-    # print(f"Order summary: Items: {names}, Total: {total}")
+# 8. 📦 Factorial Function (using loop)
+# Write a function factorial(n) that returns the factorial of a number using a loop.
+# def fatorial_function(n):
+#     result = 1
+#     for i in range(1 ,n + 1):
+#         result *= i
+#     return result
+# print("Factorial is ",fatorial_function(10))
 
-if __name__ == "__main__":
-    main()
+# 9. 🔁 Check Prime Number
+# Write a function is_prime(n) that checks whether a number is prime or not.
+
+# def is_prime(n):
+#     if n <= 1:
+#         return False  # 0 and 1 are not prime
+
+#     for i in range(2, int(n ** 0.5) + 1):  # only go up to sqrt(n)
+#         if n % i == 0:
+#             return False  # divisible by something, so not prime
+
+#     return True  # it's prime if loop completes
+
+# print(is_prime(7))   
+# print(is_prime(10))  
+# print(is_prime(2))   
+# print(is_prime(1))   
+
+
+# 10. 📦 Combine Loops and Functions
+# Create a function print_even_in_range(start, end) that uses a loop to print all even numbers between two given numbers.def print_even_in_range(start, end):
+def print_even_in_range(start, end):
+        for num in range(start ,end + 1):
+             if num % 2 == 0:
+                print(num)
+print_even_in_range(10, 20)

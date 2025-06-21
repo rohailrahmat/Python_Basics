@@ -92,4 +92,4 @@ def func1(x):
 
 s = func1(6)
 
-print(s(8))
+print((8))
